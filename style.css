@@ -12,7 +12,7 @@
 
     position: absolute;
     left: 0px;
-    transition: left 1s;
+    transition: left 0.5s;
    
    
 }
@@ -56,7 +56,7 @@
       left: 40%;
   }
   .active, .dot:hover {
-    background-color: red;
+    background-color:#717171;
   }
 
   img{
