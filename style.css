@@ -49,12 +49,17 @@
     display: inline-block;
     transition: background-color 0.6s ease;
   }
-  .dot-wrapper{
+  #dot-wrapper{
       position: absolute;
       bottom: 10px;
       text-align: center;
       left: 40%;
   }
   .active, .dot:hover {
-    background-color: #717171;
+    background-color: red;
+  }
+
+  img{
+    display: block;
+    float: left;
   }
