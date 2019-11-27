@@ -8,6 +8,7 @@ var imageindex = 0;
 for (var i = 0; i <= imageCount - 1; i++) {
   var span = document.createElement("span");
   span.classList.add("dot");
+  span.setAttribute("onclick", "dotClick(" + i + ")");
   document.getElementById("dot-wrapper").appendChild(span);
 }
 var span = document.getElementById("dot-wrapper").children;
@@ -29,7 +30,7 @@ function changePos() {
   renderDot();
 }
 function repeat() {
-  plusSlides(1);
+  plusSlides(1, 0);
 }
 
 function activeDot() {
@@ -46,4 +47,8 @@ function renderDot() {
   }
 }
 
-var myVar = setInterval(repeat, 2000);
+function dotClick(index) {
+  console.log("click", i);
+  imageindex = index;
+  changePos();
+}
