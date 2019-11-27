@@ -1,3 +1,4 @@
+
 var imageWidth = 400;
 var imageCount = document.getElementById("carousel-image-wrapper").childElementCount;
 var carouselImageWrapperWidth = imageCount * imageWidth;
@@ -14,6 +15,7 @@ for (var i = 0; i <= imageCount - 1; i++) {
 var span = document.getElementById("dot-wrapper").children;
 renderDot();
 function plusSlides(n, c) {
+
   if (n === -1) {
     imageindex++;
     changePos();
@@ -22,6 +24,7 @@ function plusSlides(n, c) {
     imageindex--;
     changePos();
   }
+  
 }
 
 function changePos() {
@@ -48,7 +51,8 @@ function renderDot() {
 }
 
 function dotClick(index) {
-  console.log("click", i);
   imageindex = index;
   changePos();
 }
+
+var timer= setInterval(repeat,3000);
