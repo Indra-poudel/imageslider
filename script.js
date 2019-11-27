@@ -5,7 +5,7 @@ var carouselImageWrapper = document.getElementById("carousel-image-wrapper");
 carouselImageWrapper.style.width = carouselImageWrapperWidth + "px";
 carouselImageWrapper.style.height = 200 + "px";
 var imageindex = 0;
-for (var i = 0; i <=imageCount - 1; i++) {
+for (var i = 0; i <= imageCount - 1; i++) {
   var span = document.createElement("span");
   span.classList.add("dot");
   document.getElementById("dot-wrapper").appendChild(span);
@@ -15,18 +15,19 @@ renderDot();
 function plusSlides(n, c) {
   if (n === -1) {
     imageindex++;
-    var index = Math.abs(imageindex) % imageCount;
-    carouselImageWrapper.style.left = -(index * imageWidth) + "px";
-    renderDot();
+    changePos();
   }
   if (n === 1) {
     imageindex--;
-    var index = Math.abs(imageindex) % imageCount;
-    carouselImageWrapper.style.left = -(index * imageWidth) + "px";
-    renderDot();
+    changePos();
   }
 }
 
+function changePos() {
+  var index = Math.abs(imageindex) % imageCount;
+  carouselImageWrapper.style.left = -(index * imageWidth) + "px";
+  renderDot();
+}
 function repeat() {
   plusSlides(1);
 }
